@@ -14,7 +14,7 @@ var LocalStrategy=require("passport-local");
 app.use(exp.static(__dirname+"/public"));
 // mongoose.connect('mongodb://localhost:27017/YelpCamp',{ useNewUrlParser :true, useUnifiedTopology: true });
 
-mongoose.connect('mongodb+srv://Jarvis:eminem313@cluster0-b9lnh.mongodb.net/test?retryWrites=true&w=majority',{
+mongoose.connect('mongodb+srv://Jarvis:iamthebeST!!22@cluster0-b9lnh.mongodb.net/test?retryWrites=true&w=majority',{
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true
