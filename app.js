@@ -65,6 +65,6 @@ app.use("/campgrounds/:id/comments", commentRoutes);
 
 // Listening===============================================
 
-app.listen(3000,function(){
+app.listen(process.env.PORT||3000,function(){
     console.log("Listening one server 3000");
 });
