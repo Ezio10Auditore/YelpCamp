@@ -12,7 +12,18 @@ var mongoose=require("mongoose");
 var passport=require("passport");
 var LocalStrategy=require("passport-local");
 app.use(exp.static(__dirname+"/public"));
-mongoose.connect('mongodb://localhost:27017/YelpCamp',{ useNewUrlParser :true, useUnifiedTopology: true });
+// mongoose.connect('mongodb://localhost:27017/YelpCamp',{ useNewUrlParser :true, useUnifiedTopology: true });
+
+mongoose.connect('mongodb+srv://Jarvis:iamthebeST!!22@cluster0-b9lnh.mongodb.net/test?retryWrites=true&w=majority',{
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true
+}).then(()=>{
+    console.log("CONNECTED!!!");
+}).catch(err=>{
+    console.log("Error : ",err.message);
+});
+
 var CampGround=require("./models/campground.js");
 var Comment=require("./models/comment.js");
 var User=require("./models/user.js");
