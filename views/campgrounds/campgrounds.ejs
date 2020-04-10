@@ -1,0 +1,30 @@
+<%- include("../partials/header") %>
+
+    <div class="container">
+        <header class="jumbotron">
+            <div class="container">
+                <h1>Campgrounds</h1>
+                <p>View our handpicked campgrounds</p>
+                <p>
+                    <a class="btn btn-primary btn-lg" href="/campgrounds/new">Enter a new campground</a>
+                </p>
+            </div>
+        </header>
+        
+        <div class="row text-center">
+            <% cg.forEach(function(campG){ %>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card">
+                        <img src="<%= campG.image %>" alt="">
+                    </div>
+                    <div class="caption">
+                        <h4><%= campG.name %></h4>
+                    </div>
+                    <a href="/campgrounds/<%= campG._id %>" class="btn-primary btn-lg">More Info</a>
+                </div>
+            <% }) %>
+        </div>
+
+    </div>
+
+<%- include("../partials/footer") %>
